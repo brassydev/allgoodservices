@@ -12,8 +12,7 @@ export default function Home() {
       <h1 class="text-blue m-5">
         Services <span class="text-dark">We Provide</span>
       </h1>
-      <div class="container">
-        
+      <div class="container">  
       </div>
       <div class="row align-items-center d-flex justify-content-center">
         <div class="col">
@@ -38,6 +37,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Feedback/>
       <Banner />
     </>
   );
