@@ -1,9 +1,11 @@
+"use client";
+
 export default function Feedback() {
   return (
     <>
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 m-0">
             <video autoPlay width="300" height="340" muted loop>
               <source src="/images/feedback.mp4" type="video/mp4" />
               Your browser does not support the video tag.
