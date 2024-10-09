@@ -1,10 +1,20 @@
-import Image from "next/image";
+"use client";
+import Home_Banner from "@/components/home_banner";
 import styles from "./page.module.css";
+
+import Services from "@/components/services";
+import Feedback from "@/components/feedback";
+import AboutUs from "@/components/About_Us";
+import Banner from "@/components/banner";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-        <h2>Home page</h2>
-    </div>
+    <>
+    <Home_Banner/>
+    <Services/>
+    <Feedback/>
+    <AboutUs/> 
+    <Banner/>    
+    </>
   );
 }
