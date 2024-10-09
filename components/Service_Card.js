@@ -8,7 +8,7 @@ export default function Card(props) {
           <img
             src={props.image}
             alt="services"
-            height="200px"
+            height="150px"
             className="image-position"
           ></img>
         </div>

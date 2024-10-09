@@ -1,18 +1,35 @@
 .text-blue {
   color: #00428c !important;
 }
-.custom-btn {
+.bg-blue {
   background-color: #00428c !important;
 }
-.parent-container {
+.bg-white {
+  background-color: white !important;
+}
+.center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-spacing {
+  padding: 20px 120px;
+  text-align: justify;
+}
+.parent_container {
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
-.center {
-  flex-direction: column;
+.text-align {
+  letter-spacing: 2px;
+  text-align: justify;
+  line-height: 30px;
 }
 
+
+/*Home Banner*/
 .home_banner {
   background-image: url("/images/home_banner.jpg");
   background-size: cover;
@@ -27,7 +44,7 @@
   width: 30%;
   background-color: #00428c;
   box-sizing: border-box;
-  position: absolute; /* Use absolute positioning */
+  position: absolute;
   top: 12rem;
   right: 25px;
 }
@@ -37,9 +54,33 @@
   border-style: solid;
   width: 30%;
 }
-.custom-white-btn {
-  background-color: white !important;
+
+/*Services*/
+.container-box {
+  cursor: pointer;
+  margin: 100px 50px 50px 50px;
+  border-radius: 8px;
+  padding: 30px 31px;
+  transition: 0.5s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 30vh;
 }
+.container-box:hover {
+  background-color: #e53935;
+  color: white;
+}
+.image-position {
+  position: absolute;
+  margin-top: -110px;
+}
+
+/*Feedback*/
+.video_container {
+  border: none;
+  border-radius: 10px;
+}
+
+/*Banner*/
 .banner {
   background-image: url("/images/banner.jpg");
   background-size: cover;
@@ -52,24 +93,6 @@
   background-color: #00428c;
   border-radius: 20px;
   width: 35%;
-}
-.container-box {
-  cursor: pointer;
-  margin: 130px 50px 50px 50px;
-  border-radius: 8px;
-  padding: 30px 31px;
-  transition: 0.5s;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  min-height: 30vh;
-}
-.image-position {
-  position: absolute;
-  margin-top: -110px;
-}
-.text-align {
-  letter-spacing: 2px;
-  text-align: justify;
-  line-height: 30px;
 }
 
 /* Media Queries */

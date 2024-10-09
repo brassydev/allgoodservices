@@ -37,7 +37,7 @@ export default function Navigation() {
               </a>
             </li>
           </ul>
-            <button className="btn btn-primary custom-btn" type="button">
+            <button className="btn btn-primary bg-blue" type="button">
               Contact Us Today
             </button>
         </div>
