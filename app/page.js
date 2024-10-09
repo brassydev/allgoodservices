@@ -2,7 +2,7 @@
 import Home_Banner from "@/components/home_banner";
 import styles from "./page.module.css";
 
-import Services from "@/components/services";
+import Services from "@/components/Services";
 import Feedback from "@/components/feedback";
 import AboutUs from "@/components/About_Us";
 import Banner from "@/components/banner";
