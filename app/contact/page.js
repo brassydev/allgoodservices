@@ -415,7 +415,7 @@ export default function HealthInsuranceForm() {
             <Box sx={{ mt: 3 }}>
               {formData.familyMembers.length > 0 &&
                 formData.familyMembers.map((member, index) => (
-                  <Grid item xs={12} sx={{ mb: 2 }}>
+                  <Grid key={index} item xs={12} sx={{ mb: 2 }}>
                     <Paper
                       elevation={3}
                       sx={{

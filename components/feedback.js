@@ -29,10 +29,10 @@ export default function Feedback() {
               }}
               ></i>
               <span className="bg-blue quotes">“Many businesses are struggling with
-              their SBA loans, but you don’t have to
-              be one of them. If you're finding it hard
+              their SBA loans, but you don&apos;t have to
+              be one of them. If you&apos;re finding it hard
               to repay your EIDL loan, reach out for
-              support now before it's too late”</span>
+              support now before it&apos;s too late”</span>
               <span className="quotes-author">-Tom Watson,CEO of Technologies</span>
             </div>
           </div>
@@ -52,8 +52,8 @@ export default function Feedback() {
             </p>
             <span  className="text-align">We understand 
               how stressful it can be to manage repayment obligations, especially in uncertain times. 
-              By contacting us, you’ll receive a tailored plan to help restructure your loan, reduce 
-              your payment burden, and protect your credit. Don't let 
+              By contacting us, you&apos;ll receive a tailored plan to help restructure your loan, reduce 
+              your payment burden, and protect your credit. Don&apos;t let 
               financial worries hold you back—get in touch with us today!
             </span>
           </div>
