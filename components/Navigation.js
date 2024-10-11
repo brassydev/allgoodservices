@@ -66,9 +66,11 @@ export default function Navigation() {
             <p style={{ margin: 0, textDecorationLine: "underline" }}>Have any Question?</p>
             <p style={{ margin: 0 }}>682-376-8733</p>
           </div>
+          <Link href="/health-insurance">
           <button className="btn btn-primary bg-blue border-0 font-weight-600" type="button">
-            Apply Today
-          </button>
+             Apply Today
+           
+          </button></Link>
         </div>
       </div>
     </nav>

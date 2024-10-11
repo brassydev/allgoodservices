@@ -3,9 +3,9 @@
 export default function Feedback() {
   return (
     <div className="">
-      <div className="container p-5">
-        <div className="row p-5">
-          <div className="col-md-4">
+      <div className="container pb-5 pt-5 pe-5">
+        <div className="row">
+          <div className="col-md-4 pe-5">
             <div className="position-relative ">
               <video
                 className="video_container center"
@@ -36,8 +36,8 @@ export default function Feedback() {
               <span className="quotes-author">-Tom Watson,CEO of Technologies</span>
             </div>
           </div>
-          <div className="col-md-8 center">
-            <h1 className="heading-text text-blue">Struggling with
+          <div className="col-md-7 center">
+            <h1 className="heading-text text-blue">Struggling with<br/>
             SBA loan?</h1>
             <p className="text-align">
               <b>Contact Us</b>

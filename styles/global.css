@@ -15,6 +15,12 @@
   flex-direction: column;
   justify-content: center;
 }
+.vertical-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .text-spacing {
   padding: 20px 120px;
   text-align: justify;
@@ -172,13 +178,22 @@
     opacity: 1; /* Fully visible */
   }
 }
-
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at the original position */
+  }
+}
 .video_container,
 .quotes,
 .quotes-author,
 .text-align,
 .heading-text {
-  animation: slideUp 1s ease-out;
+  animation: fadeIn 1s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -233,7 +248,7 @@
   font-size: medium;
   display: inline;
   position: absolute;
-  bottom: 36px;
+  bottom: 42px;
   left: 10px;
   right: 10px;
 }
@@ -241,11 +256,18 @@
   position: absolute;
   bottom: 8px;
   background-color: black;
-  font-size: small;
+  font-size: medium;
   text-align: center;
   display: inline;
-  left: 10px;
-  right: 10px;
+  left: 50px;
+  right: 50px;
   border-radius: 8px;
   color: white;
+  padding: 2px;
+}
+
+.card-animate {
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards; /* Card slides up in 0.5s */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
