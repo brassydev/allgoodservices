@@ -7,6 +7,9 @@
 .bg-white {
   background-color: white !important;
 }
+.border-blue {
+  border-color: #00428c !important;
+}
 .center {
   align-items: center;
   display: flex;
