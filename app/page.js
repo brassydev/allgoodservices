@@ -1,6 +1,5 @@
 "use client";
 import Home_Banner from "@/components/home_banner";
-import styles from "./page.module.css";
 
 import Services from "@/components/Services";
 import Feedback from "@/components/feedback";

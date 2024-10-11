@@ -8,13 +8,13 @@ export default function Card(props) {
           <img
             src={props.image}
             alt="services"
-            height="150px"
-            className="image-position"
+            width="100%"
+            className=""
           ></img>
         </div>
-        <h6 className="text-blue mt-5">
+        <h3 className="text-blue mt-3">
           <b>{props.title}</b>
-        </h6>
+        </h3>
         <p>{props.description}</p>
       </div>
     </>

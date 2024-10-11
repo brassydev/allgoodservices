@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <>
       <div className="container">
-        <h1 className="text-blue my-5">
+        <h1 className="heading-text text-blue my-5">
           Services <span className="text-dark">We Provide</span>
         </h1>
         <div className="row align-items-center d-flex justify-content-center">
