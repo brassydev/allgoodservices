@@ -6,6 +6,7 @@ import Feedback from "@/components/feedback";
 import AboutUs from "@/components/About_Us";
 import Home_Banner from "@/components/Home_Banner";
 import Banner from "@/components/Banner";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <Services/>
     <Feedback/>
     <AboutUs/> 
+    <Contact/>
     <Banner/>    
     </>
   );
