@@ -1,8 +1,71 @@
 "use client";
 
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Contact_form() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/contact_form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast.success("Thank you for your feedback!", {
+          style: {
+            border: "1px solid #4BB543",
+            padding: "16px",
+            color: "#4BB543",
+          },
+          iconTheme: {
+            primary: "#4BB543",
+            secondary: "#FFFAEE",
+          },
+        });
+        // Reset form
+        setFormData({
+          firstName: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error("Error submitting feedback.", {
+          style: {
+            border: "1px solid #FF6347",
+            padding: "16px",
+            color: "#FF6347",
+          },
+          iconTheme: {
+            primary: "#FF6347",
+            secondary: "#FFFAEE",
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -57,32 +120,43 @@ export default function Contact_form() {
             <div className="contact_form_container">
               <h2>Send a message</h2>
               <p className="text-blue">Drop a line !</p>
-              <TextField
-                label="First Name"
-                variant="outlined"
-                fullWidth
-                margin="normal"
-                name="firstName"
-                required
-              />
-              <TextField
-                label="E-mail"
-                variant="outlined"
-                fullWidth
-                margin="normal"
-                name="email"
-                required
-              />
-              <TextField
-                label="Message"
-                variant="outlined"
-                fullWidth
-                margin="normal"
-                name="message"
-                required
-                multiline
-                rows={4}
-              />
+              <form onSubmit={handleSubmit}>
+                <TextField
+                  label="First Name"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <TextField
+                  label="E-mail"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <TextField
+                  label="Message"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  multiline
+                  rows={4}
+                  required
+                />
+                <Button variant="contained" type="submit" className="bg-blue">
+                  Submit
+                </Button>
+              </form>
             </div>
           </div>
         </div>

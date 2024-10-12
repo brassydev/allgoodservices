@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.vertical-center{
+.vertical-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +73,6 @@
 .container-box:hover {
   background-color: #e53935;
   color: white;
-
 }
 .container-box:hover h3 {
   color: white !important;
@@ -155,8 +154,9 @@
   transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-.nav-link, .btn {
-  transition: color 0.3s ease, background-color 0.3s ease ; /* Initial smooth transition for both link and button */
+.nav-link,
+.btn {
+  transition: color 0.3s ease, background-color 0.3s ease; /* Initial smooth transition for both link and button */
 }
 .active-menu {
   color: #0056b3; /* Active menu color */
@@ -165,13 +165,12 @@
   transition: color 0.3s ease;
 }
 
-
 .banner-btn:hover {
   color: #0056b3 !important; /* Change the text color to blue on hover */
   transition: color 0.3s ease; /* Smooth transition for the color change */
   background-color: aliceblue !important;
 }
-.border-0{
+.border-0 {
   border-width: 0 !important;
 }
 /* Container Animation */
@@ -231,14 +230,11 @@
   animation-delay: 0.7s; /* Delay for the heading and text to slide up after quotes */
 }
 
-
-
 /* Home Container Transition */
 .home_container {
   opacity: 1; /* Initially hidden */
   transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
   animation: slideUp 1.5s ease-in-out; /* 1.5s slide-up animation */
-
 }
 
 .home_container:hover {
@@ -255,13 +251,13 @@
   color: #0056b3; /* Text turns blue on hover */
   background-color: #f0f0f0; /* Button background turns lighter */
 }
-.heading-text{
-  padding-bottom:'3rem';
-  text-align:'left';    
+.heading-text {
+  padding-bottom: "3rem";
+  text-align: "left";
   font-size: xxx-large;
-    font-weight: 700;
+  font-weight: 700;
 }
-.quotes{
+.quotes {
   color: white;
   border-radius: 8px;
   padding: 2px 5px;
@@ -272,7 +268,7 @@
   left: 10px;
   right: 10px;
 }
-.quotes-author{
+.quotes-author {
   position: absolute;
   bottom: 8px;
   background-color: black;
