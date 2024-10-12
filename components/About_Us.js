@@ -42,7 +42,7 @@ export default function AboutUs() {
       </div>
       <div className="container">
           <div className="row">
-            <div className="col-md-6 center p-5">
+            <div className="col-md-6 center">
               <div className="d-flex-column align-items-center">
                 <i className="fas fa-handshake fa-3x me-3"></i> {/* Icon */}
                 <h2 style={{fontWeight:'bold'}}>Comprehensive Financial Solutions</h2>
@@ -60,10 +60,11 @@ export default function AboutUs() {
                 </p>
               </div>
             </div>
-            <div className="col-md-6 pb-5 center">
+            <div className="col-md-6 center">
               <img
                 src="/images/finance_banner.png"
                 alt="banner"
+                width={'100%'}
               ></img>
             </div>
           </div>

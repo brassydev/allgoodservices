@@ -6,7 +6,8 @@ import Services from "@/components/Services";
 import Feedback from "@/components/feedback";
 import AboutUs from "@/components/About_Us";
 import Banner from "@/components/banner";
-import Contact from "./contact/page";
+import Contact_form from "@/components/ContactForm";
+import Map from "@/components/Map";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
     <Feedback/>
     <AboutUs/> 
     <Banner/>    
-    <Contact/>
+    <Contact_form />
+    <Map />
     </>
   );
 }

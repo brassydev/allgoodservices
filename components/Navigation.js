@@ -62,6 +62,20 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
+          <div>
+            <i className="fa-solid fa-phone"
+                style={{
+                  fontSize: "32px",
+                }}></i>
+          </div>
+          <span
+            style={{
+              borderLeft: "1px solid black", // Creates the vertical line
+              height: "38px", // Adjust height to match icon size
+              marginLeft: "10px", // Adds spacing between icon and line
+              marginRight:"10px"
+            }}
+          ></span>
           <div style={{ flexDirection: "column", textAlign: "center", marginRight: "1rem" }}>
             <p style={{ margin: 0, textDecorationLine: "underline" }}>Have any Question?</p>
             <p style={{ margin: 0 }}>682-376-8733</p>

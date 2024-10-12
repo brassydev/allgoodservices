@@ -74,7 +74,7 @@ export default function Contact_form() {
         <div className="row">
           <div className="col-md-6 mt-5">
             <h2>
-              <span className="text-blue">Contact Us</span> Today
+              <span className="heading-text text-blue">Contact Us</span> Today
             </h2>
             <p className="mt-3">
               We’d love to hear from you! Whether you have questions about our
@@ -89,21 +89,26 @@ export default function Contact_form() {
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                eidl@allgoodservices.net
+                <a href="mailto:eidl@allgoodservices.net" style={{ textDecoration: 'none', color: 'black' }}>
+                  eidl@allgoodservices.net
+                </a>
               </h6>
             </div>
             <div className="d-flex align-items-center mt-4">
               <i
-                class="fa-brands fa-whatsapp"
+                className="fa-brands fa-whatsapp"
                 style={{
                   fontSize: "32px",
                   color: "#2fba42",
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                682-376-8733
+                <a href="https://wa.me/16823768733" style={{ textDecoration: 'none', color: 'black' }}>
+                  682-376-8733
+                </a>
               </h6>
             </div>
+
             <div className="d-flex align-items-center mt-4">
               <i
                 className="fa-solid fa-phone"
@@ -113,9 +118,12 @@ export default function Contact_form() {
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                682-376-8733
+                <a href="tel:16823768733" style={{ textDecoration: 'none', color: 'black' }}>
+                  682-376-8733
+                </a>
               </h6>
             </div>
+
             <div className="contact_line my-5"></div>
           </div>
           <div className="col-md-6 mt-5 mb-5">
@@ -146,7 +154,6 @@ export default function Contact_form() {
                 <TextField
                   label="Phone Number"
                   type="tel"
-                  variant="outlined"
                   fullWidth
                   margin="normal"
                   name="phone"
@@ -163,13 +170,17 @@ export default function Contact_form() {
                   value={formData.message}
                   onChange={handleChange}
                   multiline
-                  rows={4}
+                  rows={2}
                   required
                 />
-                <Button variant="contained" type="submit" className="bg-blue">
+               
+              </form>
+              <div style={{height:'40px',position:'relative'}}>
+              <Button sx={{position:'absolute',right:0,top:10}} variant="contained" type="submit" className="bg-blue">
                   Submit
                 </Button>
-              </form>
+              </div>
+              
             </div>
           </div>
         </div>

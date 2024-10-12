@@ -223,7 +223,7 @@ export default function HealthInsuranceForm() {
 
   return (
     <>
-        <PageBanner title={'Health Insurance'}/>
+        <PageBanner title={'Health Insurance'} imageUrl={'/images/page_banner.jpg'}/>
         <Container sx={{ mt: 5 , position:'relative', mb:  10}}>
             <form onSubmit={handleSubmit}>
                 <Grid container spacing={2}>
