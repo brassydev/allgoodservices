@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="col-md-3">
           <h6>30 Commercial Road Fratton, Australia</h6>
         </div>
-        <div className="col-md-3">
+        <div style={{textAlign:'right'}} className="col-md-3">
           <h6>Telephone: 682-376-8733 eidl@allgoodservices.net</h6>
         </div>
       </div>

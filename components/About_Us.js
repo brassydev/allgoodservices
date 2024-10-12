@@ -4,8 +4,8 @@ export default function AboutUs() {
   return (
     <>
       <div className="container">
-        <h1>About our organization</h1>
-        <p>
+        <h1 className="heading-text mb-3">About our organization</h1>
+        <p style={{maxWidth:'1000px'}}>
           Introduce your company here. You can discuss your company&apos;s
           background, history, mission, vision, or philosophy - anything that
           will introduce your brand&apos;s persona to your audience. This will help
@@ -13,18 +13,22 @@ export default function AboutUs() {
         </p>
       </div>
       <div className="row">
-        <div className="col-md-6 my-5 bg-blue text-white pt-4">
-          <h2 className="center">Our mission and vision</h2>
+        <div style={{textAlign:'center'}} className="col-md-6 my-5 bg-blue text-white p-5">
+          <i className="fas fa-bullseye fa-3x me-3"></i> {/* Icon */}
+          <h2 className="font-weight-700 pt-3">Our mission and vision</h2>
           <p className="text-spacing">
             We will be on your side, educating you to understand your financial
-            needs, the best options available and help achieving your goals Our
+            needs, the best options available and help achieving your goals. Our
             vision is to be the team you can count on to bring you sound advice
             during the ups and downs in life so that your tomorrow will be
-            brighter
+            brighter.
           </p>
         </div>
-        <div className="col-md-6 my-5 pt-4">
-          <h2 className="center">Our work so far</h2>
+        <div style={{textAlign:'center'}} className="col-md-6 my-5 p-5">
+         
+            <i className="fas fa-briefcase fa-3x me-3"></i> {/* Icon */}
+            <h2 className="font-weight-700 pt-3">Our work so far</h2>
+        
           <p className="text-spacing">
             Crucial to establishing credibility and trust is a good track
             record. Talk about your journey so far and the work you&apos;ve
@@ -34,31 +38,36 @@ export default function AboutUs() {
             your goals faster.
           </p>
         </div>
-        <div className="row">
-          <div className="col-md-6 center p-5">
-            <p className="text-align">
-              <b>Comprehensive Financial Solutions</b>
-              <br></br>
-              At AllGood Finance Services, we are dedicated to empowering
-              businesses and individuals to achieve financial stability and
-              success. With a deep understanding of the financial challenges
-              faced by businesses today, our organization provides expert
-              services tailored to your needs. We offer a wide range of
-              financial services, including SBA and EIDL loan assistance, debt
-              management, and personalized financial strategies. Whether you
-              need help with repayment or navigating complex loan processes,
-              we&apos;ve got you covered.
-            </p>
-          </div>
-          <div className="col-md-6 center">
-            <img
-              src="/images/finance_banner.png"
-              height="500"
-              alt="banner"
-            ></img>
+       
+      </div>
+      <div className="container">
+          <div className="row">
+            <div className="col-md-6 center p-5">
+              <div className="d-flex-column align-items-center">
+                <i className="fas fa-handshake fa-3x me-3"></i> {/* Icon */}
+                <h2 style={{fontWeight:'bold'}}>Comprehensive Financial Solutions</h2>
+                <p className="text-align">
+                
+                  At AllGood Finance Services, we are dedicated to empowering
+                  businesses and individuals to achieve financial stability and
+                  success. With a deep understanding of the financial challenges
+                  faced by businesses today, our organization provides expert
+                  services tailored to your needs. We offer a wide range of
+                  financial services, including SBA and EIDL loan assistance, debt
+                  management, and personalized financial strategies. Whether you
+                  need help with repayment or navigating complex loan processes,
+                  we&apos;ve got you covered.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 pb-5 center">
+              <img
+                src="/images/finance_banner.png"
+                alt="banner"
+              ></img>
+            </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
