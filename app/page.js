@@ -5,7 +5,8 @@ import styles from "./page.module.css";
 import Services from "@/components/Services";
 import Feedback from "@/components/feedback";
 import AboutUs from "@/components/About_Us";
-import Banner from "@/components/banner";
+import Banner from "@/components/Banner";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <Services/>
     <Feedback/>
     <AboutUs/> 
+    <Contact/>
     <Banner/>    
     </>
   );

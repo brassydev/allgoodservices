@@ -1,7 +1,13 @@
-import React from 'react'
+"use client";
 
-export default function page() {
+import Contact_form from "@/components/ContactForm";
+import Map from "@/components/Map";
+
+export default function Contact() {
   return (
-    <div>Contact page</div>
-  )
+    <>
+      <Contact_form />
+      <Map />
+    </>
+  );
 }
