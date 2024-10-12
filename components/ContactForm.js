@@ -6,8 +6,9 @@ import toast from "react-hot-toast";
 
 export default function Contact_form() {
   const [formData, setFormData] = useState({
-    firstName: "",
+    name: "",
     email: "",
+    phone: " ",
     message: "",
   });
 
@@ -44,8 +45,9 @@ export default function Contact_form() {
         });
         // Reset form
         setFormData({
-          firstName: "",
+          name: "",
           email: "",
+          phone: "",
           message: "",
         });
       } else {
@@ -122,12 +124,12 @@ export default function Contact_form() {
               <p className="text-blue">Drop a line !</p>
               <form onSubmit={handleSubmit}>
                 <TextField
-                  label="First Name"
+                  label="Name"
                   variant="outlined"
                   fullWidth
                   margin="normal"
-                  name="firstName"
-                  value={formData.firstName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   required
                 />
@@ -138,6 +140,17 @@ export default function Contact_form() {
                   margin="normal"
                   name="email"
                   value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <TextField
+                  label="Phone Number"
+                  type="tel"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   required
                 />
