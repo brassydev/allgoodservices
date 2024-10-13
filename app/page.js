@@ -7,7 +7,7 @@ import Feedback from "@/components/feedback";
 import AboutUs from "@/components/About_Us";
 import Contact_form from "@/components/ContactForm";
 import Map from "@/components/Map";
-import Banner from "@/components/Banner";
+import Banner from "@/components/banner";
 
 export default function Home() {
   return (
