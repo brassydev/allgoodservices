@@ -1,6 +1,9 @@
 .text-blue {
   color: #00428c !important;
 }
+.text-red {
+  color: #e53935 !important;
+}
 .bg-blue {
   background-color: #00428c !important;
 }
@@ -32,6 +35,10 @@
 }
 .text-align {
   line-height: 30px;
+}
+.text-justify {
+  width: 80%;
+  text-align: justify;
 }
 
 /*Home Banner*/
@@ -286,4 +293,18 @@
   opacity: 0;
   animation: slideUp 0.5s ease-out forwards; /* Card slides up in 0.5s */
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/*Service Detail Page*/
+.service-button {
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+.service-detail-container {
+  border-radius: 10px;
+  padding: 30px 31px;
+  transition: 0.5s;
+  box-shadow: rgba(85, 90, 95, 0.2) 0px 8px 24px;
+  min-height: 30vh;
 }
