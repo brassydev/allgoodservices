@@ -4,7 +4,7 @@ import PageBanner from "@/components/PageBanner";
 import { Container, Grid } from "@mui/material";
 import { useState } from "react";
 
-export default function tax_Service() {
+export default function Tax_Service() {
   const [activeTab, setActiveTab] = useState(0);
 
   // Data for each tab (titles and descriptions)
@@ -99,8 +99,8 @@ export default function tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    Ensuring you&apos;re well-prepared for future tax seasons and
-                    helping you navigate any changes in tax laws. <br />
+                    Ensuring you&apos;re well-prepared for future tax seasons
+                    and helping you navigate any changes in tax laws. <br />
                   </p>
                   <p className="mt-2 text-justify">
                     From small business owners to individuals with complex tax
