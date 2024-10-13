@@ -99,7 +99,7 @@ export default function tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    Ensuring you're well-prepared for future tax seasons and
+                    Ensuring you&apos;re well-prepared for future tax seasons and
                     helping you navigate any changes in tax laws. <br />
                   </p>
                   <p className="mt-2 text-justify">
