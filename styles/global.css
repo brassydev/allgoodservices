@@ -264,6 +264,12 @@
   font-size: xxx-large;
   font-weight: 700;
 }
+.service-heading-text{
+  padding-bottom: "3rem";
+  text-align: "left";
+  font-size: xx-large;
+  font-weight: 700;
+}
 .quotes {
   color: white;
   border-radius: 8px;

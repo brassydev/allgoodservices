@@ -2,10 +2,11 @@
 
 import PageBanner from "@/components/PageBanner";
 import { Container, Grid } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Tax_Service() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isFixed, setIsFixed] = useState(false);
 
   // Data for each tab (titles and descriptions)
   const services = [
@@ -42,6 +43,27 @@ export default function Tax_Service() {
     },
   ];
 
+  // Handle scroll event to make the sidebar fixed when it reaches the top
+  useEffect(() => {
+    const handleScroll = () => {
+      const sidebar = document.querySelector(".sidebar");
+
+      // Check if sidebar exists before accessing its properties
+      if (sidebar) {
+        const offsetTop = sidebar.offsetTop;
+
+        if (window.scrollY > offsetTop) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <PageBanner
@@ -51,46 +73,53 @@ export default function Tax_Service() {
       <div className="container">
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
-            <div className="contact_form_container mt-5">
-              <div className="container">
-                {services.map((service, index) => (
-                  <div
-                    key={index}
-                    className={`service-button text-white d-flex align-items-center mt-3 ${
-                      activeTab === index ? "active-tab" : "inactive-tab"
-                    }`}
-                    onClick={() => setActiveTab(index)}
-                    style={{
-                      cursor: "pointer",
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-arrow-right p-3"
+            {/* Sidebar with dynamic fixed effect */}
+            <div className={`sidebar ${isFixed ? "fixed-sidebar" : ""}`}>
+              <div className="contact_form_container mt-5">
+                <div className="container">
+                  {services.map((service, index) => (
+                    <div
+                      key={index}
+                      className={`service-button text-white d-flex align-items-center mt-3 ${
+                        activeTab === index ? "active-tab" : "inactive-tab"
+                      }`}
+                      onClick={() => setActiveTab(index)}
                       style={{
-                        fontSize: "18px",
-                        color: "white",
+                        cursor: "pointer",
                       }}
-                    ></i>
-                    <h6>{service}</h6>
-                  </div>
-                ))}
+                    >
+                      <i
+                        className="fa-solid fa-arrow-right p-3"
+                        style={{
+                          fontSize: "18px",
+                          color: "white",
+                        }}
+                      ></i>
+                      <h6>{service}</h6>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="service-detail-container my-5 bg-blue text-white">
-              <h4>Need Service?</h4>
-              <h2 className="px-5 py-2">682-376-8733</h2>
-              <h6 className="px-5 py-2">eidl@allgoodservices.net</h6>
+              <div className="service-detail-container my-5 bg-blue text-white">
+                <h4>Need Service?</h4>
+                <h2 className="px-5 py-2">682-376-8733</h2>
+                <h6 className="px-5 py-2">eidl@allgoodservices.net</h6>
+              </div>
             </div>
           </Grid>
           <Grid item xs={12} md={8} sm={12}>
             {/* Dynamic content based on the active tab */}
             <div className="container m-5">
-              <img
-                src={tabContents[activeTab].imageUrl}
-                alt="tax-service"
-                height="250px"
-              />
-              <h3 className="mt-4 text-red">{tabContents[activeTab].title}</h3>
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src={tabContents[activeTab].imageUrl}
+                  alt="tax-service"
+                  height="250px"
+                />
+              </div>
+              <h3 className="mt-4 text-red service-heading-text">
+                {tabContents[activeTab].title}
+              </h3>
               {tabContents[activeTab].paragraphs.map((paragraph, idx) => (
                 <p className="mt-3 text-justify" key={idx}>
                   {paragraph}
@@ -99,8 +128,8 @@ export default function Tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    Ensuring you&apos;re well-prepared for future tax seasons
-                    and helping you navigate any changes in tax laws. <br />
+                    Ensuring you're well-prepared for future tax seasons and
+                    helping you navigate any changes in tax laws. <br />
                   </p>
                   <p className="mt-2 text-justify">
                     From small business owners to individuals with complex tax
@@ -123,7 +152,7 @@ export default function Tax_Service() {
                   />
                 </Grid>
               </Grid>
-              <h3 className="mt-4 text-red">
+              <h3 className="mt-4 text-red service-heading-text">
                 Expert Tax Solutions for Individuals & Businesses
               </h3>
               <ul className="list-unstyled">
@@ -161,6 +190,17 @@ export default function Tax_Service() {
         .inactive-tab {
           background-color: #00428c;
           opacity: 0.65;
+        }
+
+        .sidebar {
+          transition: all 0.3s ease;
+        }
+
+        .fixed-sidebar {
+          position: fixed;
+          top: 0;
+          width: 28.3%; /* Adjust based on layout */
+          z-index: 999;
         }
       `}</style>
     </>
