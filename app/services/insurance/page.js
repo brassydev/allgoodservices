@@ -10,36 +10,36 @@ export default function Tax_Service() {
 
   // Data for each tab (titles and descriptions)
   const services = [
-    "Tax Services for Individuals and Businesses",
-    "Expertise and Commitment to Compliance",
-    "Year-Round Support and Personalized Planning",
+    "Auto and Home Insurance Solutions",
+    "Regulatory Compliance and Data Security",
+    "Personalized Support and Competitive Rates",
   ];
 
   // Content for each tab (can be extended with different content for each tab)
   const tabContents = [
     {
-      title: "Tax Services for Individuals and Businesses.",
+      title: "Auto and Home Insurance Solutions",
       paragraphs: [
-        "At All Good Services, we offer a wide range of tax services to meet the needs of both individuals and businesses. Our offerings include individual tax preparation, business tax returns, audit support, and consulting services.",
-        "Our team of Certified Public Accountants (CPAs) has over 7 years of collective experience, ensuring that every client receives expert care tailored to their unique tax situation.",
+        "At All Good Services, we provide comprehensive auto and home insurance solutions tailored to protect what matters most to you.",
+        "Our services include Auto Insurance and Home Insurance, offering a variety of coverage options to fit your needs, including Liability Coverage, Collision Coverage, Comprehensive Coverage, and Personal Property Coverage.",
       ],
-      imageUrl: "/images/service/tax_service/image1.jpg",
+      imageUrl: "/images/service/insurance/image1.jpg",
     },
     {
-      title: "Expertise and Commitment to Compliance",
+      title: "Regulatory Compliance and Data Security",
       paragraphs: [
-        "Our team provides accurate and up-to-date tax solutions that ensure compliance with evolving tax regulations.",
-        "We assist both individuals and businesses in maintaining tax compliance, reducing the risk of audits or penalties.",
+        "We adhere to all federal and state regulations governing insurance practices, ensuring that your policies are compliant and protecting your rights as a policyholder.",
+        " Additionally, we prioritize the security of your personal information through advanced data protection measures.",
       ],
-      imageUrl: "/images/service/tax_service/image3.jpg",
+      imageUrl: "/images/service/insurance/image2.jpg",
     },
     {
-      title: "Year-Round Support and Personalized Planning",
+      title: "Personalized Support and Competitive Rates",
       paragraphs: [
-        "We offer ongoing support throughout the year, helping you plan for the next tax season.",
-        "Our experts provide personalized tax planning services to ensure you maximize tax benefits and minimize liabilities.",
+        "Our dedicated team works closely with you to understand your unique needs and tailor coverage accordingly. ",
+        "We guide you through the insurance process, offering competitive rates and discounts for bundling policies, ensuring you get the best value for your insurance. Protect your assets and gain peace of mind with All Good Services. ",
       ],
-      imageUrl: "/images/service/tax_service/image4.jpg",
+      imageUrl: "/images/service/insurance/image3.jpg",
     },
   ];
 
@@ -67,8 +67,8 @@ export default function Tax_Service() {
   return (
     <>
       <PageBanner
-        title={"Tax Services"}
-        imageUrl={"/images/service/tax_service/tax_banner.jpg"}
+        title={"Insurance Service"}
+        imageUrl={"/images/service/insurance/banner.jpg"}
       />
       <div className="container">
         <Grid container spacing={2}>
@@ -128,12 +128,14 @@ export default function Tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    Ensuring you&apos;re well-prepared for future tax seasons and
-                    helping you navigate any changes in tax laws. <br />
+                    At All Good Services, we provide comprehensive insurance
+                    solutions designed to protect your assets, whether you&apos;re an
+                    individual or a business.
+                    <br />
                   </p>
                   <p className="mt-2 text-justify">
-                    From small business owners to individuals with complex tax
-                    scenarios, we provide peace of mind and accurate results.
+                    Ensuring you&apos;re well-prepared for future tax seasons and
+                    helping you navigate any changes in tax laws.
                   </p>
                 </Grid>
                 <Grid
@@ -146,14 +148,14 @@ export default function Tax_Service() {
                   style={{ display: "flex" }} // Enable flexbox
                 >
                   <img
-                    src="/images/service/tax_service/image2.jpg"
+                    src="/images/service/insurance/image4.jpg"
                     alt="tax-service"
                     height="180px"
                   />
                 </Grid>
               </Grid>
               <h3 className="mt-4 text-red service-heading-text">
-                Expert Tax Solutions for Individuals & Businesses
+                Insurance Solutions Tailored to Your Needs
               </h3>
               <ul className="list-unstyled">
                 <li>
@@ -164,8 +166,9 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  From personal tax preparation to business returns, audit
-                  support and consulting
+                  From Auto Insurance to Home Insurance, we guide you through
+                  the complexities of insurance policies, providing peace of
+                  mind with accurate and tailored results.
                 </li>
                 <li>
                   <i
@@ -175,7 +178,9 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  Experienced Team with over 7 years of CPA expertise
+                  With competitive rates, bundled discounts, and dedicated
+                  support, we help you secure the right coverage to safeguard
+                  what matters most.
                 </li>
               </ul>
             </div>
