@@ -26,10 +26,10 @@ export default function Footer() {
           <i className="fa-brands fa-twitter px-2" style={{ color: "#00428c" }}></i>
         </div>
         <div className="col-md-3">
-          <h6>30 Commercial Road Fratton, Australia</h6>
+          <h6>230 Vine St, Euless, TX 76040</h6>
         </div>
         <div style={{textAlign:'right'}} className="col-md-3">
-          <h6>Telephone: 682-376-8733 eidl@allgoodservices.net</h6>
+          <h6>Telephone: 682-551-1698 eidl@allgoodservices.net</h6>
         </div>
       </div>
     </div>
