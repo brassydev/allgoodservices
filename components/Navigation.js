@@ -78,7 +78,7 @@ export default function Navigation() {
           ></span>
           <div style={{ flexDirection: "column", textAlign: "center", marginRight: "1rem" }}>
             <p style={{ margin: 0, textDecorationLine: "underline" }}>Have any Question?</p>
-            <p style={{ margin: 0 }}>682-376-8733</p>
+            <p style={{ margin: 0 }}>682-551-1698</p>
           </div>
           <Link href="/health-insurance">
           <button className="btn btn-primary bg-blue border-0 font-weight-600" type="button">
