@@ -1,5 +1,7 @@
 "use client"; // This marks the file as a Client Component
 import React, { useState } from "react";
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import {
   Container,
@@ -43,7 +45,18 @@ export default function HealthInsuranceForm() {
 
   const [open, setOpen] = useState(false);
   const [currentMemberIndex, setCurrentMemberIndex] = useState(null);
+  const handleDeleteClick = (index) => {
+    const updatedFamilyMembers = formData.familyMembers.filter((_, i) => i !== index);
+    setFormData({
+        ...formData,
+        familyMembers: updatedFamilyMembers
+    });
+};
 
+  const handleEditClick = (index) => {
+    setCurrentMemberIndex(index);  // Set the index of the family member being edited
+    setOpen(true);  // Open the modal
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -152,38 +165,34 @@ export default function HealthInsuranceForm() {
   };
 
   const handleClose = () => {
-    if (formData.familyMembers.length > 0) {
-      const currentMember =
-        formData.familyMembers[formData.familyMembers.length - 1];
+    console.log("csacas")
+        const currentMember =
+          formData.familyMembers[formData.familyMembers.length - 1];
+  
+        // Check if all required fields are filled for the current member
+        const allFieldsFilled =
+          currentMember.firstName ||
+          currentMember.lastName ||
+          currentMember.ssn ||
+          currentMember.birthday;
+        console.log(allFieldsFilled)
+  
+        if (!allFieldsFilled) {
+            if (formData.familyMembers.length > 0) {
+                // Remove the last family member from the array
+                const updatedFamilyMembers = [...formData.familyMembers];
+                updatedFamilyMembers.pop(); // Remove the last member from the array
+                setFormData((prevData) => ({
+                  ...prevData,
+                  familyMembers: updatedFamilyMembers, // Update the family members array
+                }));
+              }
+        }
+   
 
-      // Check if all required fields are filled for the current member
-      const allFieldsFilled =
-        currentMember.firstName &&
-        currentMember.lastName &&
-        currentMember.ssn &&
-        currentMember.birthday &&
-        currentMember.relationship;
-
-      if (!allFieldsFilled) {
-        toast.error(
-          "Please fill in all fields for the current family member before closing.",
-          {
-            style: {
-              border: "1px solid #FF6347",
-              padding: "16px",
-              color: "#FF6347",
-            },
-            iconTheme: {
-              primary: "#FF6347",
-              secondary: "#FFFAEE",
-            },
-          }
-        );
-        return; // Prevent closing the dialog if fields are not filled
-      }
-    }
     setOpen(false); // Close the dialog
-  };
+};
+
 
   const handleSave = () => {
     if (formData.familyMembers.length > 0) {
@@ -436,64 +445,43 @@ export default function HealthInsuranceForm() {
                                 alignItems: "center",
                                 borderRadius: 2,
                                 boxShadow: 2,
-                                padding: 2,
                                 bgcolor: "white",
                                 "&:hover": {
                                 boxShadow: 4,
                                 },
                             }}
                             >
-                            <Grid container spacing={2} alignItems="center">
-                                <Grid
-                                item
-                                xs={2}
-                                display="flex"
-                                justifyContent="center"
-                                >
-                                <AccountCircle
-                                    sx={{ fontSize: 40, color: "#00428c" }}
-                                />
-                                </Grid>
-                                <Grid
-                                item
-                                xs={3}
-                                display="flex"
-                                justifyContent="center"
-                                >
-                                <Typography
-                                    variant="body1"
-                                    sx={{ fontWeight: "bold", color: "#00428c" }}
-                                >
-                                    {member.firstName}
-                                </Typography>
-                                </Grid>
-                                <Grid
-                                item
-                                xs={3}
-                                display="flex"
-                                justifyContent="center"
-                                >
-                                <Typography variant="body1" sx={{ color: "#555" }}>
-                                    {member.ssn}
-                                </Typography>
-                                </Grid>
-                                <Grid
-                                item
-                                xs={4}
-                                display="flex"
-                                justifyContent="center"
-                                >
-                                <Typography variant="body1" sx={{ color: "#555" }}>
-                                    {new Date(member.birthday).toLocaleDateString()}{" "}
-                                    {/* Format birthday if needed */}
-                                </Typography>
-                                </Grid>
-                            </Grid>
+                            <div style={{display:'flex' , alignItems:'center' , justifyContent:'space-between',width:'100%'}} spacing={2} alignItems="center">
+                                <div item xs={2} display="flex" justifyContent="center">
+                                    <AccountCircle sx={{ fontSize: 40, color: "#00428c" }} />
+                                </div>
+                                <div item xs={3} display="flex" justifyContent="center">
+                                    <Typography variant="body1" sx={{ fontWeight: "bold", color: "#00428c" }}>
+                                        {member.firstName}
+                                    </Typography>
+                                </div>
+                                <div item xs={2} display="flex" justifyContent="center">
+                                    <Typography variant="body1" sx={{ color: "#555" }}>
+                                        {new Date(member.birthday).toLocaleDateString()}
+                                    </Typography>
+                                </div>
+                                {/* Edit Button */}
+                                <div item xs={2} display="flex" justifyContent="center">
+                                    <IconButton onClick={() => handleEditClick(index)}>
+                                        <EditIcon color="primary" />
+                                    </IconButton>
+                                </div>
+                                {/* Delete Button */}
+                                <div item xs={2} display="flex" justifyContent="center">
+                                    <IconButton onClick={() => handleDeleteClick(index)}>
+                                        <DeleteIcon color="error" />
+                                    </IconButton>
+                                </div>
+                            </div>
                             </Paper>
                         </Grid>
                         ))}
                     </Box>
-
                     <Dialog
                     open={open}
                     onClose={handleClose}
