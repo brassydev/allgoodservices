@@ -42,7 +42,7 @@ export default function HealthInsuranceForm() {
     monthlyIncome: "",
     familyMembers: [], // Store family members here
   });
-
+  const [isLoading, setIsLoading] = useState(false)
   const [open, setOpen] = useState(false);
   const [currentMemberIndex, setCurrentMemberIndex] = useState(null);
   const handleDeleteClick = (index) => {
@@ -111,6 +111,7 @@ export default function HealthInsuranceForm() {
   };
 
   const handleSubmit = async (e) => {
+    setIsLoading(true);
     e.preventDefault();
     try {
       const res = await fetch("/api/health_insurance_form", {
@@ -122,6 +123,7 @@ export default function HealthInsuranceForm() {
       });
 
       if (res.ok) {
+        setIsLoading(false);
         toast.success("Health Insurance Application submitted successfully!", {
           style: {
             border: "1px solid #4BB543",
@@ -147,6 +149,7 @@ export default function HealthInsuranceForm() {
           familyMembers: [],
         });
       } else {
+        setIsLoading(false);
         toast.error("Error submitting form.", {
           style: {
             border: "1px solid #FF6347",
@@ -161,6 +164,7 @@ export default function HealthInsuranceForm() {
       }
     } catch (error) {
       console.error("Error:", error);
+      setIsLoading(false);
     }
   };
 
@@ -381,13 +385,14 @@ export default function HealthInsuranceForm() {
                     </Grid>
                     </Grid>
                     <Button
-                variant="contained"
-                type="submit"
-                sx={{ mt: 5, pl:5,pr:5,fontWeight:600, float:'right'}}
-                className="bg-blue"
-                >
-                Submit Application
-                </Button>
+                        variant="contained"
+                        type="submit"
+                        sx={{ mt: 5, pl: 5, pr: 5, fontWeight: 600, float: 'right' }}
+                        className="bg-blue"
+                        disabled={isLoading} // Disable the button when isLoading is true
+                        >
+                        {isLoading ? "Loading..." : "Submit Application"}
+                    </Button>
                 </Grid>
                 <Grid item xs={12} sm={4} md={4}>
                     {/* Family Members Section */}
