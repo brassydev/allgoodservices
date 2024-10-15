@@ -46,16 +46,22 @@ export default function Tax_Service() {
   // Handle scroll event to make the sidebar fixed when it reaches the top
   useEffect(() => {
     const handleScroll = () => {
-      const sidebar = document.querySelector(".sidebar");
+      const sidebar = document.querySelector(".main-content");
 
       // Check if sidebar exists before accessing its properties
       if (sidebar) {
         const offsetTop = sidebar.offsetTop;
+        const windowWidth = window.innerWidth;
 
-        if (window.scrollY > offsetTop) {
-          setIsFixed(true);
+        // Only make the sidebar fixed if the window width is greater than 900px
+        if (windowWidth > 900) {
+          if (window.scrollY > offsetTop - 48) {
+            setIsFixed(true);
+          } else {
+            setIsFixed(false);
+          }
         } else {
-          setIsFixed(false);
+          setIsFixed(false); // Reset to not fixed below 900px
         }
       }
     };
@@ -70,7 +76,7 @@ export default function Tax_Service() {
         title={"Insurance Service"}
         imageUrl={"/images/service/insurance/banner.jpg"}
       />
-      <div className="container">
+       <div style={{paddingLeft:"5%",paddingRight:'5%'}}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
             {/* Sidebar with dynamic fixed effect */}
@@ -102,14 +108,14 @@ export default function Tax_Service() {
               </div>
               <div className="service-detail-container my-5 bg-blue text-white">
                 <h4>Need Service?</h4>
-                <h2 className="px-5 py-2">682-376-8733</h2>
-                <h6 className="px-5 py-2">eidl@allgoodservices.net</h6>
+                <h2 className="">682-551-1698</h2>
+                <h6 className="">eidl@allgoodservices.net</h6>
               </div>
             </div>
           </Grid>
           <Grid item xs={12} md={8} sm={12}>
             {/* Dynamic content based on the active tab */}
-            <div className="container m-5">
+            <div className="container main-content m-5">
               <div style={{ textAlign: "center" }}>
                 <img
                   src={tabContents[activeTab].imageUrl}
@@ -204,7 +210,7 @@ export default function Tax_Service() {
         .fixed-sidebar {
           position: fixed;
           top: 0;
-          width: 28.3%; /* Adjust based on layout */
+          width: 29.3%; /* Adjust based on layout */
           z-index: 999;
         }
       `}</style>
