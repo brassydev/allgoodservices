@@ -29,7 +29,7 @@ export default function Footer() {
           <h6>230 Vine St, Euless, TX 76040</h6>
         </div>
         <div style={{textAlign:'right'}} className="col-md-3">
-          <h6>Telephone: 682-551-1698 eidl@allgoodservices.net</h6>
+          <h6>Telephone: 682-376-3299 info@allgoodservices.net</h6>
         </div>
       </div>
     </div>
