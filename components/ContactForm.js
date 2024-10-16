@@ -89,8 +89,8 @@ export default function Contact_form() {
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                <a href="mailto:eidl@allgoodservices.net" style={{ textDecoration: 'none', color: 'black' }}>
-                  eidl@allgoodservices.net
+                <a href="mailto:info@allgoodservices.net" style={{ textDecoration: 'none', color: 'black' }}>
+                  info@allgoodservices.net
                 </a>
               </h6>
             </div>
@@ -103,8 +103,8 @@ export default function Contact_form() {
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                <a href="https://wa.me/16823768733" style={{ textDecoration: 'none', color: 'black' }}>
-                  682-376-8733
+                <a href="https://wa.me/16823763299" style={{ textDecoration: 'none', color: 'black' }}>
+                682-376-3299
                 </a>
               </h6>
             </div>
@@ -118,8 +118,8 @@ export default function Contact_form() {
                 }}
               ></i>
               <h6 className="contact_container d-flex align-items-center px-3">
-                <a href="tel:16823768733" style={{ textDecoration: 'none', color: 'black' }}>
-                  682-376-8733
+                <a href="tel:16823763299" style={{ textDecoration: 'none', color: 'black' }}>
+                682-376-3299
                 </a>
               </h6>
             </div>

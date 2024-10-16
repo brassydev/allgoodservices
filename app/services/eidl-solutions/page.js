@@ -108,8 +108,8 @@ export default function Tax_Service() {
               </div>
               <div className="service-detail-container my-5 bg-blue text-white">
                 <h4>Need Service?</h4>
-                <h2 className="">682-551-1698</h2>
-                <h6 className="">eidl@allgoodservices.net</h6>
+                <h2 className="">682-376-3299</h2>
+                <h6 className="">info@allgoodservices.net</h6>
               </div>
             </div>
           </Grid>
