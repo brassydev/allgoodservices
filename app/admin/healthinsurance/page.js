@@ -27,37 +27,50 @@ export default function AdminContact() {
 
   return (
     <>
-      <section id="insurance-forms">
-        <h2 className="text-blue">Health Insurance Form Submissions</h2>
-        <table className="admin_table">
-          <thead>
-            <tr>
-              <th>Policy Holder</th>
-              <th>Plan Type</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {insuranceForms.length > 0 ? (
-              insuranceForms.map((form) => (
-                <tr key={form._id}>
-                  <td>{form.firstName || "N/A"}</td>
-                  <td>{form.lastName || "N/A"}</td>
-                  <td>
-                    {form.createdAt
-                      ? new Date(form.createdAt).toLocaleDateString()
-                      : "No date"}
-                  </td>
-                </tr>
-              ))
-            ) : (
+      <main className="dashboard-content">
+        <section id="insurance-forms" className="mt-5">
+          <h2 className="text-blue">Health Insurance Form Submissions</h2>
+          <table className="admin_table">
+            <thead>
               <tr>
-                <td colSpan="4">No insurance forms available</td>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Social Security No</th>
+                <th>Date</th>
+                <th>Date</th>
               </tr>
-            )}
-          </tbody>
-        </table>
-      </section>
+            </thead>
+            <tbody>
+              {insuranceForms.length > 0 ? (
+                insuranceForms.map((form) => (
+                  <tr key={form._id}>
+                    <td>
+                      {form.firstName || "N/A"}
+                      {form.lastName || "N/A"}
+                    </td>
+                    <td>{form.email}</td>
+                    <td>{form.phone}</td>
+                    <td>{form.ssn}</td>
+                    <td>
+                      {form.createdAt
+                        ? new Date(form.createdAt).toLocaleDateString()
+                        : "No date"}
+                    </td>
+                    <td>
+                      <button className="btn btn-success">View</button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="4">No insurance forms available</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </section>
+      </main>
     </>
   );
 }

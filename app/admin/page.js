@@ -52,37 +52,27 @@ export default function AdminDashboard() {
 
   return (
     <div className="admin-dashboard">
-      {/* Left-side Navbar */}
-      <nav className="sidebar">
-        <ul>
-          <li>
-            <a href="#">Dashboard</a>
-          </li>
-          <li>
-            <a href="#contacts">Contact Forms</a>
-          </li>
-          <li>
-            <a href="#insurance-forms">Health Insurance Forms</a>
-          </li>
-        </ul>
-      </nav>
-
       {/* Right-side Dashboard */}
       <main className="dashboard-content">
         <h1 className="text-blue mb-5">Admin Dashboard</h1>
-
         {/* Dashboard Cards */}
         <div className="dashboard-cards m-2">
           <div className="row">
-            <div className="col-md-6">
-              <div className="card">
-                <h3>Contact Enquires</h3>
+            <div className="col-md-4">
+              <div className="card dashboard-card">
+                <h6>Contact Enquires</h6>
                 <h1>{contacts.length}</h1>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="card">
-                <h3>Health Insurance Applications</h3>
+            <div className="col-md-4">
+              <div className="card dashboard-card">
+                <h6>Health Insurance Applications</h6>
+                <h1>{insuranceForms.length}</h1>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card dashboard-card">
+                <h6>Home/Auto Insurance Applications</h6>
                 <h1>{insuranceForms.length}</h1>
               </div>
             </div>
@@ -104,7 +94,7 @@ export default function AdminDashboard() {
             <tbody>
               {contacts.length > 0 ? (
                 contacts.map((contact) => (
-                  <tr key={contact._id}>
+                  <tr key={contact._id} className="table-row">
                     <td>{contact.name || "N/A"}</td>
                     <td>{contact.email || "N/A"}</td>
                     <td>{contact.message || "No message provided"}</td>
@@ -134,13 +124,13 @@ export default function AdminDashboard() {
                 <th>Phone</th>
                 <th>Social Security No</th>
                 <th>Date</th>
-                <th>Date</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {insuranceForms.length > 0 ? (
                 insuranceForms.map((form) => (
-                  <tr key={form._id}>
+                  <tr key={form._id} className="table-row">
                     <td>
                       {form.firstName || "N/A"}
                       {form.lastName || "N/A"}
