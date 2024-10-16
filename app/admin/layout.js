@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <div className="row">
           <div className="col-md-2">
             {/* Left-side Navbar */}
-            <nav className="sidebar">
+            <nav className="admin-sidebar">
               <ul>
                 <li className="mb-5 mt-0">
                   <a href="#">
