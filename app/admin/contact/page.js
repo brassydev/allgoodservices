@@ -43,7 +43,7 @@ export default function AdminContact() {
             <tbody>
               {contacts.length > 0 ? (
                 contacts.map((contact) => (
-                  <tr key={contact._id}>
+                  <tr key={contact._id} className="table-row">
                     <td>{contact.name || "N/A"}</td>
                     <td>{contact.email || "N/A"}</td>
                     <td>{contact.message || "No message provided"}</td>

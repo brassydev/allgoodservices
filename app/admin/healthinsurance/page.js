@@ -38,13 +38,13 @@ export default function AdminContact() {
                 <th>Phone</th>
                 <th>Social Security No</th>
                 <th>Date</th>
-                <th>Date</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {insuranceForms.length > 0 ? (
                 insuranceForms.map((form) => (
-                  <tr key={form._id}>
+                  <tr key={form._id} className="table-row">
                     <td>
                       {form.firstName || "N/A"}
                       {form.lastName || "N/A"}
