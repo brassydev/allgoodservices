@@ -8,7 +8,9 @@ export default function Navigation() {
 
   // Function to check if the link is active, handling both "/" and empty path
   const isActive = (path) => pathname === path || (pathname === "/" && path === "");
-
+  if(pathname?.startsWith("/admin")){
+    return null
+  }
   return (
     <nav className="navbar navbar-expand-sm">
       <div className="container nav-head">

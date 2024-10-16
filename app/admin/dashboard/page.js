@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import authMiddleware from "@/lib/authMiddleware";
 
-export default function AdminDashboard() {
+function AdminDashboard() {
   const [contacts, setContacts] = useState([]);
   const [insuranceForms, setInsuranceForms] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -160,3 +161,4 @@ export default function AdminDashboard() {
     </div>
   );
 }
+export default authMiddleware(AdminDashboard);
