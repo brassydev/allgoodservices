@@ -21,7 +21,7 @@ export default function Services() {
           Services <span className="text-dark">We Provide</span>
         </h1>
         <div className="row align-items-center d-flex justify-content-center">
-          <div className="col">
+          <div className="col-md-3">
             <div className={isVisible ? "card-animate" : ""}>
               <Link
                 href="/services/tax-service"
@@ -35,7 +35,7 @@ export default function Services() {
               </Link>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md-3">
             <div className={isVisible ? "card-animate" : ""}>
               <Link
                 href="/services/insurance"
@@ -49,7 +49,7 @@ export default function Services() {
               </Link>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md-3">
             <div className={isVisible ? "card-animate" : ""}>
               <Link
                 href="/services/insurance"
@@ -63,7 +63,7 @@ export default function Services() {
               </Link>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md-3">
             <div className={isVisible ? "card-animate" : ""}>
               <Link
                 href="/services/eidl-solutions"
