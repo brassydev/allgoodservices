@@ -42,7 +42,7 @@ export default function Home_Banner() {
                   </button>
                 </Link>
                 <button
-                  className="btn banner-btn bg-white text-dark m-3 border-0"
+                  className="btn banner-btn bg-white text-dark my-3 me-3 border-0"
                   onClick={handleContactClick}
                 >
                   <b>Contact Us</b>

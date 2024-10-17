@@ -8,7 +8,7 @@ export default function Footer() {
   }
   return (
     <div className="container py-5">
-      <div className="row align-items-center d-flex justify-content-center">
+      <div className="row footer align-items-center d-flex justify-content-center">
         <div className="col-md-3">
           <a className="navbar-brand" href="#">
             <img

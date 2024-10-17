@@ -115,7 +115,7 @@ export default function Tax_Service() {
           </Grid>
           <Grid item xs={12} md={8} sm={12}>
             {/* Dynamic content based on the active tab */}
-            <div className="container main-content m-5">
+            <div className="container main-content p-3">
               <div style={{ textAlign: "center" }}>
                 <img
                   src={tabContents[activeTab].imageUrl}
