@@ -1,6 +1,11 @@
 "use client";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  if(pathname?.startsWith("/admin")){
+    return null
+  }
   return (
     <div className="container py-5">
       <div className="row align-items-center d-flex justify-content-center">
