@@ -10,39 +10,38 @@ export default function Tax_Service() {
 
   // Data for each tab (titles and descriptions)
   const services = [
-    "Understanding EIDL Loans and Default Consequences",
-    "General Consequences of Defaulting on EIDL Loans",
-    "Options to Overcome an EIDL Loan Crisis",
+    "Understanding the Affordable Care Act (ACA)",
+    "Privacy, Compliance, and Personalized Support",
+    "Comprehensive Guidance and Ongoing Assistance",
   ];
 
   // Content for each tab (can be extended with different content for each tab)
   const tabContents = [
     {
-      title: "Understanding EIDL Loans and Default Consequences",
+      title: "Understanding the Affordable Care Act (ACA)",
       paragraphs: [
-        "The Economic Injury Disaster Loan (EIDL) program was introduced during the COVID-19 pandemic to support small businesses with non-repayable grants and loans. However, defaulting on an EIDL loan can have serious consequences, which vary depending on the amount borrowed:",
-        "For loans up to $25,000: These are unsecured loans, meaning no assets are at risk. For loans between $25,000 and $200,000: The lender can seize business assets as collateral, and the impact on personal credit depends on whether the loan was taken using an EIN or Social Security number.For loans over $200,000: Business assets will be seized, and personal assets may also be at risk due to the personal guarantee required for these loans.",
+        "The Affordable Care Act (ACA), enacted in 2010, aims to increase healthcare access, improve quality, and reduce costs.Individuals can apply through licensed insurance agents. ",
+        "It established health insurance marketplaces that provide essential health benefits and protect consumers from discrimination based on pre-existing conditions.",
       ],
-      imageUrl: "/images/service/eidl/image1.jpg",
+      imageUrl: "/images/service/health-insurance/image1.jpg",
     },
     {
-      title: "General Consequences of Defaulting on EIDL Loans",
+      title: "Privacy, Compliance, and Personalized Support",
       paragraphs: [
-        "Defaulting on any EIDL loan can lead to severe consequences, regardless of the loan amount:Federal Payments Withheld: The U.S. Treasury Department can withhold tax refunds and a portion of Social Security payments to recover the debt.Ineligibility for Federal Programs: You may be disqualified from participating in future federal programs or receiving government benefits.Wage Garnishment: The U.S. Treasury Department can garnish up to 15% of your wages without needing a court order.",
-        "Additionally, missing one or two payments does not immediately result in default. Default typically occurs after 3-4 months of missed payments or other factors, such as violating loan terms or filing for bankruptcy.",
+        "At All Good Services, we prioritize your privacy and strictly adhere to HIPAA and ACA regulations to protect your personal health information.",
+        "Our dedicated team offers tailored support to help you navigate the complexities of ACA options and find the right plan for your needs.",
       ],
-      imageUrl: "/images/service/eidl/image2.jpg",
+      imageUrl: "/images/service/health-insurance/image2.jpg",
     },
     {
-      title: "Options to Overcome an EIDL Loan Crisis",
+      title: "Comprehensive Guidance and Ongoing Assistance",
       paragraphs: [
-        "Offer in Compromise: This allows you to propose a lower repayment amount to settle your debt. The SBA may accept this offer if you’ve liquidated your collateral assets, aren't in bankruptcy, and can prove financial hardship.",
-        "Filing for Bankruptcy: Bankruptcy can stop debt collection efforts temporarily, eliminate or discharge debts, and protect your assets. While it provides a fresh start, it's a complex process that should be approached with expert guidance.",
+        "With expert knowledge of ACA regulations, we simplify the enrollment process, help you avoid common pitfalls, and ensure you meet all deadlines. ",
+        "Our commitment doesn’t end with enrollment – we provide continuous support to answer questions and resolve issues, ensuring you fully benefit from your health plan.",
       ],
-      imageUrl: "/images/service/eidl/image3.jpg",
+      imageUrl: "/images/service/health-insurance/image3.jpg",
     },
   ];
-
   // Handle scroll event to make the sidebar fixed when it reaches the top
   useEffect(() => {
     const handleScroll = () => {
@@ -73,8 +72,8 @@ export default function Tax_Service() {
   return (
     <>
       <PageBanner
-        title={"EIDL Solutions"}
-        imageUrl={"/images/service/eidl/banner.jpg"}
+        title={"Health Insurance Service"}
+        imageUrl={"/images/service/health-insurance/banner.jpg"}
       />
       <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
         <Grid container spacing={2}>
@@ -119,7 +118,7 @@ export default function Tax_Service() {
               <div style={{ textAlign: "center" }}>
                 <img
                   src={tabContents[activeTab].imageUrl}
-                  alt="eidl-service"
+                  alt="health-insurance-service"
                   height="250px"
                 />
               </div>
@@ -134,15 +133,16 @@ export default function Tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    The Economic Injury Disaster Loan (EIDL) program was created
-                    to help small businesses survive the financial impacts of
-                    the COVID-19 pandemic.
+                    We offer continuous assistance to answer questions and
+                    resolve any issues that may arise to ensure you benefit from
+                    your health plan coverage .
                     <br />
                   </p>
                   <p className="mt-2 text-justify">
-                    It offered both a $10,000 non-repayable advance grant and
-                    low-interest loans, but defaulting on these loans can lead
-                    to severe consequences depending on the loan amount.
+                    Investing in health insurance is a vital step toward
+                    financial security and wellness. Choose All good services
+                    for expert assistance in navigating your Obama care
+                    healthcare options. Contact us today to get started!
                   </p>
                 </Grid>
                 <Grid
@@ -155,14 +155,14 @@ export default function Tax_Service() {
                   style={{ display: "flex" }} // Enable flexbox
                 >
                   <img
-                    src="/images/service/eidl/image4.jpg"
-                    alt="eidl-service"
+                    src="/images/service/health-insurance/image4.jpg"
+                    alt="health-insurance-service"
                     height="180px"
                   />
                 </Grid>
               </Grid>
               <h3 className="mt-4 text-red service-heading-text">
-                Economic Injury Disaster Loan
+                Health Insurance Solutions Tailored to Your Needs
               </h3>
               <ul className="list-unstyled">
                 <li>
@@ -173,9 +173,7 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  The Economic Injury Disaster Loan (EIDL) program was created
-                  to help small businesses survive the financial impacts of the
-                  COVID-19 pandemic.
+                  Expert Assistance with Health Insurance Options
                 </li>
                 <li>
                   <i
@@ -185,9 +183,7 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  It offered both a $10,000 non-repayable advance grant and
-                  low-interest loans, but defaulting on these loans can lead to
-                  severe consequences depending on the loan amount.
+                  Ongoing Support Beyond Enrollment
                 </li>
               </ul>
             </div>
