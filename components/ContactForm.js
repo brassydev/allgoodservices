@@ -173,14 +173,12 @@ export default function Contact_form() {
                   rows={2}
                   required
                 />
-               
+                <div style={{height:'40px',position:'relative'}}>
+                  <Button sx={{position:'absolute',right:0,top:10}} variant="contained" type="submit" className="bg-blue">
+                    Submit
+                  </Button>
+                </div>
               </form>
-              <div style={{height:'40px',position:'relative'}}>
-              <Button sx={{position:'absolute',right:0,top:10}} variant="contained" type="submit" className="bg-blue">
-                  Submit
-                </Button>
-              </div>
-              
             </div>
           </div>
         </div>
