@@ -4,7 +4,7 @@ import PageBanner from "@/components/PageBanner";
 import { Container, Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
-export default function Tax_Service() {
+export default function Auto_Home_Insurance() {
   const [activeTab, setActiveTab] = useState(0);
   const [isFixed, setIsFixed] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Tax_Service() {
         "At All Good Services, we provide comprehensive auto and home insurance solutions tailored to protect what matters most to you.",
         "Our services include Auto Insurance and Home Insurance, offering a variety of coverage options to fit your needs, including Liability Coverage, Collision Coverage, Comprehensive Coverage, and Personal Property Coverage.",
       ],
-      imageUrl: "/images/service/insurance/image1.jpg",
+      imageUrl: "/images/service/home-auto-insurance/image1.jpg",
     },
     {
       title: "Regulatory Compliance and Data Security",
@@ -31,7 +31,7 @@ export default function Tax_Service() {
         "We adhere to all federal and state regulations governing insurance practices, ensuring that your policies are compliant and protecting your rights as a policyholder.",
         " Additionally, we prioritize the security of your personal information through advanced data protection measures.",
       ],
-      imageUrl: "/images/service/insurance/image2.jpg",
+      imageUrl: "/images/service/home-auto-insurance/image2.jpg",
     },
     {
       title: "Personalized Support and Competitive Rates",
@@ -39,7 +39,7 @@ export default function Tax_Service() {
         "Our dedicated team works closely with you to understand your unique needs and tailor coverage accordingly. ",
         "We guide you through the insurance process, offering competitive rates and discounts for bundling policies, ensuring you get the best value for your insurance. Protect your assets and gain peace of mind with All Good Services. ",
       ],
-      imageUrl: "/images/service/insurance/image3.jpg",
+      imageUrl: "/images/service/home-auto-insurance/image3.jpg",
     },
   ];
 
@@ -73,10 +73,10 @@ export default function Tax_Service() {
   return (
     <>
       <PageBanner
-        title={"Insurance Service"}
-        imageUrl={"/images/service/insurance/banner.jpg"}
+        title={"Home/Auto Insurance Service"}
+        imageUrl={"/images/service/home-auto-insurance/banner.jpg"}
       />
-       <div style={{paddingLeft:"5%",paddingRight:'5%'}}>
+      <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
             {/* Sidebar with dynamic fixed effect */}
@@ -119,7 +119,7 @@ export default function Tax_Service() {
               <div style={{ textAlign: "center" }}>
                 <img
                   src={tabContents[activeTab].imageUrl}
-                  alt="tax-service"
+                  alt="home-auto-insurance-service"
                   height="250px"
                 />
               </div>
@@ -134,14 +134,16 @@ export default function Tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    At All Good Services, we provide comprehensive insurance
-                    solutions designed to protect your assets, whether you&apos;re an
-                    individual or a business.
+                    We offer competitive rates and discounts for bundling
+                    policies, ensuring you get the best value for your
+                    insurance.
                     <br />
                   </p>
                   <p className="mt-2 text-justify">
-                    Ensuring you&apos;re well-prepared for future tax seasons and
-                    helping you navigate any changes in tax laws.
+                    Protect your assets and gain peace of mind with All good
+                    services. Contact us today for a free quote and to learn
+                    more about how we can help you secure the right coverage for
+                    your auto and home insurance needs!
                   </p>
                 </Grid>
                 <Grid
@@ -154,14 +156,14 @@ export default function Tax_Service() {
                   style={{ display: "flex" }} // Enable flexbox
                 >
                   <img
-                    src="/images/service/insurance/image4.jpg"
-                    alt="tax-service"
+                    src="/images/service/home-auto-insurance/image4.jpg"
+                    alt="home-auto-insurance-service"
                     height="180px"
                   />
                 </Grid>
               </Grid>
               <h3 className="mt-4 text-red service-heading-text">
-                Insurance Solutions Tailored to Your Needs
+                Secure the right coverage to safeguard
               </h3>
               <ul className="list-unstyled">
                 <li>
@@ -172,9 +174,8 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  From Auto Insurance to Home Insurance, we guide you through
-                  the complexities of insurance policies, providing peace of
-                  mind with accurate and tailored results.
+                  We guide you through the complexities of insurance policies,
+                  Protection and Peace of Mind
                 </li>
                 <li>
                   <i
@@ -184,9 +185,8 @@ export default function Tax_Service() {
                       color: "#00428c",
                     }}
                   ></i>
-                  With competitive rates, bundled discounts, and dedicated
-                  support, we help you secure the right coverage to safeguard
-                  what matters most.
+                  Hassle-free to choose and secure the best policies that suit
+                  your lifestyle and budget.
                 </li>
               </ul>
             </div>
