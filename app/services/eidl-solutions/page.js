@@ -76,7 +76,7 @@ export default function Tax_Service() {
         title={"EIDL Solutions"}
         imageUrl={"/images/service/eidl/banner.jpg"}
       />
-      <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
+      <div style={{ paddingLeft: "5%" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
             {/* Sidebar with dynamic fixed effect */}

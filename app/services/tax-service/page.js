@@ -76,8 +76,8 @@ export default function Tax_Service() {
         title={"Tax Services"}
         imageUrl={"/images/service/tax_service/tax_banner.jpg"}
       />
-       <div style={{paddingLeft:"5%",paddingRight:'5%'}}>
-       <Grid container spacing={2}>
+      <div style={{ paddingLeft: "5%" }}>
+        <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
             {/* Sidebar with dynamic fixed effect */}
             <div className={`sidebar ${isFixed ? "fixed-sidebar" : ""}`}>
@@ -134,8 +134,8 @@ export default function Tax_Service() {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6} sm={12}>
                   <p className="mt-4 text-justify">
-                    Ensuring you&apos;re well-prepared for future tax seasons and
-                    helping you navigate any changes in tax laws. <br />
+                    Ensuring you&apos;re well-prepared for future tax seasons
+                    and helping you navigate any changes in tax laws. <br />
                   </p>
                   <p className="mt-2 text-justify">
                     From small business owners to individuals with complex tax

@@ -76,7 +76,7 @@ export default function Auto_Home_Insurance() {
         title={"Home/Auto Insurance Service"}
         imageUrl={"/images/service/home-auto-insurance/banner.jpg"}
       />
-      <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
+      <div style={{ paddingLeft: "5%" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sm={12}>
             {/* Sidebar with dynamic fixed effect */}
